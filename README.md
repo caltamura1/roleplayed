@@ -8,7 +8,7 @@ Thats it! For now.
 
 Features:
 1. NPC interactions through text.
-2. Voice to Text module
+2. Voice to Text module with AssemblyAI
 
 Marketing:
 - Saves the details of your world, remembers everything that has happened with total accuracy.
