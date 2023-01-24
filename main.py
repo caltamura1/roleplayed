@@ -1,15 +1,16 @@
 import os
 import openai
+from variables import api_key
 
 
-openai.api_key = "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"
+openai.api_key = api_key
 
 start_sequence = "\nAI:"
 restart_sequence = "\nHuman: "
 
 response = openai.Completion.create(
   model="text-davinci-003",
-  prompt="The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today?\nHuman: ",
+  prompt="Do you understand math?",
   temperature=1,
   max_tokens=150,
   top_p=1,
