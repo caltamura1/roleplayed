@@ -1,6 +1,6 @@
 import os
 import openai
-from variables import api_key
+from keys import api_key
 
 
 openai.api_key = api_key
