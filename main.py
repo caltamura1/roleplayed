@@ -15,22 +15,21 @@ while True:
   human_input = input("Player: ")
 
   if human_input == "stop":
-    print("Exiting. Thanks for playing! Here is your chat history!", end="\n\n")
-    # Commenting out to reduce clutter during debug
+    print("You survived the encounter! Thanks for playing! I hope you enjoyed my program! Please consider donating to my Patreon so I can continue to develop this project. I have TONS of ideas. Happy adventuring!", end="\n\n")
     # print(all_history)
     break
 
   else:
-    fhuman_input = human_input
+    fhuman_input = start_sequence + human_input
     all_input = prev_input + fhuman_input
     response = openai.Completion.create(
       model="text-davinci-003",
       prompt= all_input,
-      temperature=.9,
+      temperature=1,
       max_tokens=1000,
       top_p=1,
-      frequency_penalty=0,
-      presence_penalty=1
+      frequency_penalty=1,
+      presence_penalty=.5
     )
 
     ai_json = response
@@ -38,11 +37,11 @@ while True:
     ai_text = ai_json_parse['choices'][0]['text']
     ai_text_format = ai_text.lstrip()
 
-    print("\nNPC: " + ai_text_format, end = "\n\n")
+    print(ai_text_format, end = "\n\n")
     prev_input = all_input + ai_text_format
 
     ### Debug Code ###
-    print("\n\n\n" + prev_input)
+    ### print("\n\n\n" + prev_input)
 
     human_history = ("Player: " + fhuman_input + "\n\n")
     ai_history    = ("NPC: " + ai_text_format + "\n")
