@@ -46,3 +46,4 @@ while True:
     human_history = ("Player: " + fhuman_input + "\n\n")
     ai_history    = ("NPC: " + ai_text_format + "\n")
     all_history   = (all_history + human_history + ai_history + "\n")
+#test
