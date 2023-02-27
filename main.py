@@ -16,7 +16,7 @@ while True:
 
   if human_input == "stop":
     print("You survived the encounter! Thanks for playing! I hope you enjoyed my program! Please consider donating to my Patreon so I can continue to develop this project. I have TONS of ideas. Happy adventuring!", end="\n\n")
-    # print(all_history)
+    print(all_history)
     break
 
   else:
@@ -25,7 +25,7 @@ while True:
     response = openai.Completion.create(
       model="text-davinci-003",
       prompt= all_input,
-      temperature=1,
+      temperature=.7,
       max_tokens=1000,
       top_p=1,
       frequency_penalty=1,
@@ -46,4 +46,3 @@ while True:
     human_history = ("Player: " + fhuman_input + "\n\n")
     ai_history    = ("NPC: " + ai_text_format + "\n")
     all_history   = (all_history + human_history + ai_history + "\n")
-#test

@@ -1,0 +1,5 @@
+GTP Tuning
+1. Clear idea of its role
+2. Clear idea of the world its in
+3. Clear idea of the present situation
+4. Clear idea of the goal
