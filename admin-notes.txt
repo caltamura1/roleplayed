@@ -3,3 +3,6 @@ GTP Tuning
 2. Clear idea of the world its in
 3. Clear idea of the present situation
 4. Clear idea of the goal
+
+Finetune Test Link
+openai api completions.create -m davinci:ft-personal-2023-02-27-19-38-59 -p <YOUR_PROMPT>
